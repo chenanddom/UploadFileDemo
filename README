@@ -1,0 +1,10 @@
+#1.angularjs多文件上传
+
+    使用multipartFileRequest实现多文件上传
+#2.redis緩存的存取
+    
+    使用Redis作为缓存组件，实现数据的缓存，将数据存入redis内
+
+#3.euditor的集成
+    
+    将ueditor集成进入项目，实现前端界面的编辑更见丰富
