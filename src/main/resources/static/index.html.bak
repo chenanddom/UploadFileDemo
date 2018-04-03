@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="modalController">
+
+<head>
+    <title>ng-model模态框</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" charset="utf-8" src="views/utf8-jsp/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="views/utf8-jsp/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="views/utf8-jsp/lang/zh-cn/zh-cn.js"></script>
+
+    <style type="text/css">
+        div{
+            width:100%;
+        }
+    </style>
+</head>
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<body>
+<div>
+    <h1>完整demo</h1>
+    <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+</div>
+
+
+
+<!--<button ng-click="openModal()">打开模态框</button>
+
+<script type="text/ng-template" id="modal.html">
+    <div>
+        <div class="modal-header">
+            <h3 class="modal-title" align="center">
+                标题信息
+            </h3>
+        </div>
+        <div class="modal-body">
+            <div>
+                <p><input type="file" multiple="multiple" name="files"></p>
+                <p><input type="text" name="id" ng-model="id"></p>
+                &lt;!&ndash;<p><input type="button" value="提交" ng-click="submit()"></p>&ndash;&gt;
+            </div>
+            &lt;!&ndash;         <div align="center">
+                         模态框内容 <br>
+                         {{data}}
+                     </div>&ndash;&gt;
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">
+                提交
+            </button>
+            <button class="btn btn-warning" ng-click="cancel()">
+                取消
+            </button>
+        </div>
+    </div>
+</script>
+
+<script src="https://cdn.bootcss.com/angular.js/1.5.5/angular.min.js"></script>
+<script src="https://cdn.bootcss.com/angular-ui-bootstrap/0.11.2/ui-bootstrap-tpls.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+    var app = angular.module('app', ['ui.bootstrap']);
+    app.controller('modalController', function ($scope, $rootScope, $modal, $http) {
+        var data = "通过modal传递的数据";
+        $scope.openModal = function () {
+            var modalInstance = $modal.open({
+                templateUrl: 'modal.html',//script标签中定义的id
+                controller: 'modalCtrl',//modal对应的Controller
+                resolve: {
+                    data: function () {//data作为modal的controller传入的参数
+                        return data;//用于传递数据
+                    }
+                }
+            })
+        }
+    })
+    //模态框对应的Controller
+    app.controller('modalCtrl', function ($scope, $http, $modalInstance, data) {
+        $scope.data = data;
+
+        //在这里处理要进行的操作
+        $scope.ok = function () {
+            var fd = new FormData();
+            var files = document.querySelector('input[name="files"]').files;
+            for (var i = 0; i < files.length; i++) {
+                fd.append("files", files[i]);
+            }
+            fd.append("id", $scope.id);
+            $http({
+                method: 'POST',
+                url: 'http://192.168.5.122:9500/uploadFile',
+                data: fd,
+                headers: {'Content-Type': undefined},
+                transformRequest: angular.identity
+            }).success(function (response) {
+                console.log(response.data);
+            }).error(function () {
+            });
+//            alert("你点击了确认");
+            //$modalInstance.close();
+        };
+        $scope.cancel = function () {
+            $modalInstance.dismiss('cancel');
+        }
+    });
+</script>-->
+</body>
+</html>

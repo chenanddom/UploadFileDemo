@@ -1,0 +1,22 @@
+server:
+  port: 9500
+spring:
+  redis:
+#    host: 192.168.28.130
+    port: 6379
+    database: 2
+    host: 120.79.14.212
+#    password: Aliyun@13
+  datasource:
+    poolName: ${spring.application.name}
+    type: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/csc_mall_user?tinyInt1isBit=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root@123
+    autoCommit: false
+    minIdle: 5
+    maximumPoolSize: 20
+    connectionInitSql: select 1
+    hikari:
+      idle-timeout: 10000
