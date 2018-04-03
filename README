@@ -3,7 +3,7 @@
     使用multipartFileRequest实现多文件上传
 #2.redis緩存的存取
     
-    使用Redis作为缓存组件，实现数据的缓存，将数据存入redis内
+    使用Redis作为缓存组件，实现数据的缓存，将数据存入redis内，实现数据缓存和删除
 
 #3.euditor的集成
     
