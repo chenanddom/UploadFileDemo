@@ -21,6 +21,7 @@ spring:
     hikari:
       idle-timeout: 10000
 
+
 com:
   dom:
     cors: true
