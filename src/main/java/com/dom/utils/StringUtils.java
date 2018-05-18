@@ -1,7 +1,7 @@
 package com.dom.utils;
 
 /**
- * Created by liheng on 2017/3/15.
+ * Created by chendom on 2017/3/15.
  */
 public class StringUtils {
     /**

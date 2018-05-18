@@ -11,7 +11,7 @@ import java.util.List;
 
 /***
  *URL工具类
- * @author weishuichao
+ * @author chendom
  * @createTime 2017-03-21 17:30
  */
 public class UrlUtils {

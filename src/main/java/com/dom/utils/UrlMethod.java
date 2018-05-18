@@ -2,7 +2,7 @@ package com.dom.utils;
 
 /***
  * 一句话的功能说明描述
- * @author weishuichao
+ * @author chendom
  * @createTime 2017-04-05 10:22
  */
 public final  class UrlMethod {

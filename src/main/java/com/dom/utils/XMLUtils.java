@@ -3,7 +3,7 @@ package com.dom.utils;
 /***
  * Xml转换类
  * 封装了XML转换成object，object转换成XML的代码
- * @author pengchao
+ * @author chendom
  * @createTime 2017/3/17 10:43
  */
 import javax.xml.bind.JAXBContext;

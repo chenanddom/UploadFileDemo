@@ -1,7 +1,8 @@
 package com.dom.utils;
 
-import com.einwin.framework.utils.encoder.BASE64Decoder;
-import com.einwin.framework.utils.encoder.BASE64Encoder;
+
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -10,7 +11,7 @@ import java.security.NoSuchAlgorithmException;
 
 /***
  * 加密工具类
-  * @author pengchao
+  * @author chendom
  * @createTime 2017/3/17 10:43
  */
 public class EncryptUtils
@@ -42,9 +43,9 @@ public class EncryptUtils
     StringBuilder sb = new StringBuilder();
     for (int i = 0; i < b.length; ++i) {
       String s = Integer.toHexString(b[i] & 0xFF);
-      if (s.length() == 1)
+      if (s.length() == 1) {
         sb.append("0");
-
+      }
       sb.append(s.toUpperCase());
     }
     return sb.toString();
