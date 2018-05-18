@@ -5,7 +5,7 @@ import java.util.Date;
 
 /***
  * 日期工具类
- * @author pengchao
+ * @author chendom
  * @createTime 2017/3/17 10:43
  */
 public class DateUtils
